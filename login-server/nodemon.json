@@ -1,0 +1,8 @@
+{
+    "env": {
+        "DB_URI": "mongodb://127.0.0.1:27017/demo",
+        "CORS_URL": "https://bachelor.local:3000",
+        "ORIGIN_URL": "https://bachelor.local:3000",
+        "FIDO_URL": "bachelor.local"
+    }
+}

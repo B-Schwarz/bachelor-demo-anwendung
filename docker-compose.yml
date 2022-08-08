@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  backend:
+    depends_on:
+      - db
+    build: .
+    ports:
+      - "8080:4000"
+    environment:
+      - NODE_ENV=production
+      - DB_URI=mongodb://db:27017/demo
+      - CORS_URL=https://bachelor.local:8080
+      - ORIGIN_URL=https://bachelor.local:8080
+      - FIDO_URL=bachelor.local
+  db:
+    image: mongo:4.4.11-rc1
+    volumes:
+      - ./db_volume:/data/db
